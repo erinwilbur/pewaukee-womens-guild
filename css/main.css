@@ -1,0 +1,352 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
+/* Raleway and Dancing Script Google Web fonts */
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,300,600,800|Dancing+Script:400,700);
+
+/* COLORS ---
+	Dark: #5F6674;
+	Almost White: #F7F6F4;
+	Fuscia: #CF0772;
+	Yellow: #FFE587;
+*/
+
+/* Border Box */
+*, *:before, *:after {
+  box-sizing: border-box;
+ }
+
+a {
+	font-family: 'Raleway', sans-serif;
+	color: #CF0772;
+	text-decoration: none;
+}
+.nav li a.active {
+    color: red;
+}
+a.header-logo img {
+	float:left;
+    margin-left: -30px;
+}
+@media (max-width: 600px) {
+    a.header-logo img {
+    margin-left: 0px;
+}
+}
+p {
+    line-height: 1.6em;
+}
+#menu-icon {
+    display: none;
+    width: 40px;
+    height: 40px;
+    background: url('../images/menu-icon.png');
+    float: right;
+}
+
+/* ====== MAIN ========= */
+body {
+	background-color: #F7F6F4;
+	color: #485E87;
+	font-family: 'Raleway', Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+}
+
+.header {
+	height: 136px;
+	background: #3D5581;
+}
+
+.action {
+	background: #FFE587;
+	padding:10px;
+}
+.main-content {
+	padding:0;
+}
+.footer {
+	background: #3D5581;
+	padding: 20px;
+}
+
+/* SQUARES */
+
+.squares .square {
+	height: 440px;
+	transition: background-color 0.5s;
+	overflow:hidden;
+}
+.square.dark {
+	background: #485E87;
+	text-align: center;
+}
+.square.dark:hover {
+	background: #CF0772;
+    cursor: pointer;
+}
+.square.dark:hover > p.date {
+    color: white;
+}
+.square.dark h3 {
+	color: #FFE9AB;
+}
+.square.dark p.date {
+	color: #EA78B5;
+	font-family: 'Dancing Script', Georgia, serif;
+    transition: color 0.5s;
+}
+.square.bright {
+	background: #FFE587;
+}
+.square.bg-top {
+	background: url('../images/oat-tree.png') no-repeat right bottom;
+	padding: 20px;
+}
+.square.group-pic {
+	background: url('../images/home-group.png') no-repeat;
+	background-size: cover;
+}
+.square.bg-bottom {
+	background: url('../images/wheat.png') no-repeat;
+	background-size: cover;
+	padding: 20px;
+}
+.square.bg-bottom h2 {
+	color: #F7F6F4;
+}
+.square.bg-bottom-right {
+	background: url('../images/home-group-sm.jpg') no-repeat;
+	background-size: cover;
+}
+
+/* Overlays */
+.overlay {
+	background:rgba(255, 255, 255, 0.85);
+	text-align:center;
+	padding:190px 0;
+	opacity:0;
+	transition: opacity .25s ease;
+}
+
+.square.group-pic:hover .overlay {
+	opacity: 1;
+}
+.square.group-pic h3 {
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
+
+/* ====== NAV ====== */
+.nav {
+	float:right;
+	margin-top: 54px;
+}
+.nav li {
+	display:inline-block;
+}
+.nav li a {
+	color: #F7F6F4;
+	font-weight: 600;
+	font-size: 13px;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	transition: color 0.25s;
+}
+.nav li a:hover {
+	color: #EA78B5;
+}
+
+
+
+/* ====== TYPOGRAPHY ===== */
+.mission h1 {
+	font-size: 1.8em;
+	font-weight: 300;
+	padding: 20px 0;
+	line-height: 1.5em;
+}
+.mission h1 span {
+	font-weight: 600;
+	color: #CF0772;
+}
+h2 {
+	font-size: 1.6em;
+	color: #CF0772;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.6em;
+	text-transform: uppercase;
+}
+h5 {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #CF0772;
+    margin: 6px 0;
+}
+.action h3 {
+    margin-bottom: 0;
+}
+.footer .contact {
+	color: #F7F6F4;
+}
+.footer a {
+    color: #EA78B5;
+}
+.main-text {
+    margin: 50px 0;
+}
+.main-text h1 {
+    color: #CF0772;
+}
+.bold {
+    font-weight: 600;
+}
+.read-more {
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+.read-more:hover {
+    color: #6980AB;
+}
+.light {
+    color: white;
+    font-weight: 400;
+}
+
+/* ====== LISTS ======== */
+ul.quicklinks {
+	list-style: none;
+}
+ul.quicklinks li {
+    margin: 2px 0;
+}
+ul.quicklinks li a {
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #F7F6F4;
+}
+ul.quicklinks li a:hover {
+    color: #EA78B5;
+    transition: color 0.25s;
+}
+
+/* ====== FORMS ======= */
+.form-set {
+	margin-right: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    float: left;
+}
+.form-set:last-child {
+	margin-right: 0;
+    margin-top: 52px;
+    margin-bottom: 0;
+}
+.form-set input {
+    height: 50px;
+    border-radius: 5px;
+    border: 0;
+    padding-left: 8px;
+}
+.form-set li:first-child {
+    margin-bottom: 12px;
+}
+
+/* ====== BUTTONS ====== */
+.btn {
+	position: relative;
+	top: 6px;
+	display: block;
+	margin: 0 auto 26px;
+	width: 100px;
+	height: 44px;
+	background-color: #485E87;
+	border-radius: 5px;
+	text-align: center;
+}
+.btn-element {
+	position: relative;
+	top: -6px;
+	display: inline-block;
+	width: 100%;
+	height: 44px;
+	background-color: #6980AB;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	border: 0;
+	-webkit-transition: top 150ms linear;
+	-moz-transition: top 150ms linear;
+	transition: top 150ms linear;
+}
+.btn-element:before {
+	content: "";
+	display: inline-block;
+	margin-left: -0.25em;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.btn:hover .btn-element {
+	top: -2px;
+	color: inherit;
+}
+.btn-text {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 10px;
+	font-size: 16px;
+	font-weight: 300;
+	color: #fff;
+}
+
+/* ====== MEDIA QUERY ====== */
+@media only screen and (max-width: 900px) {
+    .nav li a {
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #menu-icon {
+        display: inline-block;
+    }
+    nav {
+        padding: 20px;
+        float: right;
+    }
+    nav ul, nav:active ul {
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: white;
+        border: 5px solid #6980AB;
+        right: 20px;
+        top: 4px;
+        width: 50%;
+        border-radius: 4px 0 4px 4px;
+        z-index: 3;
+    }
+    nav li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+    }
+    .nav li a {
+        color: #6980AB;
+        font-size: 1em;
+    }
+    nav:hover ul {
+        display: block;
+    }
+}
+@media only screen and (max-width: 440px) {
+    nav ul, nav:active ul {
+        width: 70%;
+    }
+}
+

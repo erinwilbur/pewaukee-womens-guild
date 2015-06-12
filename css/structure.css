@@ -1,0 +1,52 @@
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.one-third {
+	float: left;
+	width: 33% ;
+}
+.two-third {
+	float: left;
+	width: 66%;
+}
+@media (max-width: 800px) {
+    .one-third, .two-third {
+        width: 100%;
+    }
+    .main-text {
+        padding: 0 16px;
+    }
+    .quicklinks {
+        padding-left: 0;
+    }
+    .form-set:last-child {
+        margin-top: 20px;
+    }
+}
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
